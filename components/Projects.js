@@ -1,15 +1,11 @@
 export default function Projects() {
     return (
-      <section className="bg-gray-100 px-6 py-20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-8">Projects</h2>
-          <div className="grid gap-8">
-            <div className="p-6 bg-white rounded-xl shadow">
-              <h3 className="text-xl font-bold mb-2">Project 1</h3>
-              <p className="text-gray-600">Deskripsi singkat proyek kamu.</p>
-            </div>
-          </div>
-        </div>
+      <section className="py-16 px-8 bg-gray-100" id="projects">
+        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <li className="p-4 border rounded">Portfolio Website</li>
+          <li className="p-4 border rounded">HR Management App</li>
+        </ul>
       </section>
     )
   }
