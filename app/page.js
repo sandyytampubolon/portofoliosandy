@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Navbar from "../components/Navbar";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {

@@ -1,53 +1,40 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-
-const sections = ['Home', 'About', 'Experience', 'Projects', 'Connect'];
+import { useState } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi'; // icon menu
 
 export default function Navbar() {
-  const [active, setActive] = useState('Home');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      const offsets = sections.map((section) => {
-        const el = document.getElementById(section.toLowerCase());
-        return { section, offset: el?.offsetTop || 0 };
-      });
-
-      const current = offsets.reduce((acc, cur) => {
-        return scrollY >= cur.offset - 200 ? cur.section : acc;
-      }, 'Home');
-
-      setActive(current);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-black/70 backdrop-blur z-50 shadow-md">
-      <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4 text-white">
-        <div className="font-bold text-xl text-cyan-400">Mataharian</div>
-        <div className="space-x-6 hidden sm:flex">
-          {sections.map((sec) => (
-            <ScrollLink
-              key={sec}
-              to={sec.toLowerCase()}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className={`cursor-pointer ${
-                active === sec ? 'text-cyan-400 border-b-2 border-cyan-400' : 'hover:text-cyan-400'
-              }`}
-            >
-              {sec}
-            </ScrollLink>
-          ))}
-        </div>
+    <nav className="flex items-center justify-between py-6 border-b border-gray-800 relative">
+      <div className="text-purple-300 font-semibold text-xl">Sandy Portfolio</div>
+
+      {/* Desktop Nav */}
+      <ul className="hidden md:flex space-x-8 text-sm font-medium text-white">
+        <li><a href="#home" className="text-cyan-400 border-b-2 border-cyan-400 pb-1">Home</a></li>
+        <li><a href="#about" className="hover:text-gray-300">About</a></li>
+        <li><a href="#experience" className="hover:text-gray-300">Experience</a></li>
+        <li><a href="#projects" className="hover:text-gray-300">Projects</a></li>
+        <li><a href="#skills" className="hover:text-gray-300">Skills</a></li>
+        <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
+      </ul>
+
+      {/* Mobile Toggle */}
+      <div className="md:hidden text-white text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <HiX /> : <HiMenu />}
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <ul className="absolute top-full left-0 w-full bg-black flex flex-col items-center text-white py-4 space-y-4 z-50 md:hidden">
+          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
+          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+        </ul>
+      )}
     </nav>
   );
 }
