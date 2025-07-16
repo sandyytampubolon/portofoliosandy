@@ -1,12 +1,11 @@
 export default function Projects() {
     return (
-      <section className="py-16 px-8 bg-gray-100" id="projects">
-        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <li className="p-4 border rounded">Portfolio Website</li>
-          <li className="p-4 border rounded">HR Management App</li>
-        </ul>
+      <section id="projects" className="py-24 text-center bg-white text-black">
+        <h2 className="text-3xl font-bold mb-4">Projects</h2>
+        <p className="max-w-2xl mx-auto text-lg">
+          My projects include a HRM System for INKOPDIT, a sign language translator app, and a system performance dashboard.
+        </p>
       </section>
-    )
+    );
   }
   
