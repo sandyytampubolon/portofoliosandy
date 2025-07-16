@@ -1,4 +1,4 @@
-import "../Styles/globals.css";
+import "../Styles/Globals.css";
 
 export const metadata = {
   title: "Sandy Tampubolon – Portfolio",
