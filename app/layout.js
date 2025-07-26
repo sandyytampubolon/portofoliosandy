@@ -1,14 +1,22 @@
-import "../Styles/Globals.css";
+// app/layout.js
+import '../styles/Globals.css';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Sandy Tampubolon – Portfolio",
-  description: "Personal website of Sandy Tampubolon",
+  title: 'My Portfolio',
+  description: 'Portofolio Site',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head />
+      <body className={`${inter.className} bg-black text-white`}>
+        {children}
+      </body>
     </html>
-  );
+  )
 }
+

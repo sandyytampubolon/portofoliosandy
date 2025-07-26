@@ -21,73 +21,101 @@ export default function Home() {
     <main className="scroll-smooth bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-white">
       <div className="container mx-auto px-4">
         {/* Navbar */}
-        <nav className="flex items-center justify-between py-6 border-b border-gray-800">
-          <div className="text-purple-300 font-semibold text-xl">Sandy Portfolio</div>
-          <ul className="hidden md:flex space-x-8 text-sm font-medium">
-            <li><a href="#home" className="text-cyan-400 border-b-2 border-cyan-400 pb-1">Home</a></li>
-            <li><a href="#about" className="hover:text-gray-300">About</a></li>
-            <li><a href="#experience" className="hover:text-gray-300">Experience</a></li>
-            <li><a href="#projects" className="hover:text-gray-300">Projects</a></li>
-            <li><a href="#skills" className="hover:text-gray-300">Skills</a></li>
-            <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
-          </ul>
-        </nav>
+        <Navbar />
+
 
         {/* Hero Section */}
         <section
-          id="home"
-          className="flex flex-col justify-center items-center text-center py-32 relative overflow-hidden"
-        >
-          {/* Star dots */}
-          <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" fill="none" stroke="white" strokeWidth="1">
-              {stars.map((star, i) => (
-                <circle key={i} cx={star.cx} cy={star.cy} r="0.5" fill="white" />
-              ))}
-            </svg>
-          </div>
+  id="home"
+  className="flex flex-col-reverse md:flex-row justify-center items-center md:justify-between text-center md:text-left py-20 md:py-32 px-4 md:px-20 relative overflow-hidden"
+>
+  {/* Star dots */}
+  <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+    <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" fill="none" stroke="white" strokeWidth="1">
+      {stars.map((star, i) => (
+        <circle key={i} cx={star.cx} cy={star.cy} r="0.5" fill="white" />
+      ))}
+    </svg>
+  </div>
 
-          <h1
-            className="font-extrabold text-[3rem] sm:text-[4rem] md:text-[5rem] leading-[1.1] max-w-5xl z-10"
-            style={{
-              background: 'linear-gradient(90deg, #d07ad1 0%, #7db9d9 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            Hello World, I m Sandy 👋
-          </h1>
-          <p className="text-gray-300 text-lg mt-4 z-10 max-w-xl">
-            A passionate <span className="text-purple-400 font-semibold">Full Stack Developer</span> with an eye for elegant design & smooth user experience.
-          </p>
+  {/* Intro Text */}
+  <div className="flex flex-col items-center md:items-start z-10 max-w-xl">
+    <h1 className="text-3xl md:text-4xl text-red-500 font-bold">Introduce My Self</h1>
 
-          <div className="flex space-x-6 mt-6 z-10">
-            <a href="https://linkedin.com/in/sandyytampubolon" target="_blank" rel="noreferrer" className="hover:text-cyan-400 text-xl">
-              <FaLinkedin />
-            </a>
-            <a href="https://github.com/sandyytampubolon" target="_blank" rel="noreferrer" className="hover:text-cyan-400 text-xl">
-              <FaGithub />
-            </a>
-            <a href="mailto:sandy@example.com" className="hover:text-cyan-400 text-xl">
-              <FaEnvelope />
-            </a>
-          </div>
+    <h1
+      className="font-extrabold text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] leading-tight z-10 mt-2"
+      style={{
+        background: 'linear-gradient(90deg, #d07ad1 0%, #7db9d9 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+      }}
+    >
+      Sandy Tampubolon
+    </h1>
 
-          <a
-            href="#projects"
-            className="mt-10 inline-block px-6 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition"
-          >
-            View My Work
-          </a>
-        </section>
+    <p className="text-gray-300 text-base sm:text-lg mt-4 z-10">
+      Bachelor of <span className="text-purple-400 font-semibold">Computer Engineering</span> Graduate from Diponegoro University.
+    </p>
+
+
+<div className="flex space-x-6 mt-6 z-10 text-white">
+  <a
+    href="https://www.linkedin.com/in/sandy-tampubolon-1811942b6/"
+    target="_blank"
+    rel="noreferrer"
+    className="hover:text-cyan-400 text-xl transition-colors duration-300"
+  >
+    <FaLinkedin />
+  </a>
+
+  <a
+    href="https://github.com/sandyytampubolon"
+    target="_blank"
+    rel="noreferrer"
+    className="hover:text-cyan-400 text-xl transition-colors duration-300"
+  >
+    <FaGithub />
+  </a>
+
+  <a
+    href="mailto:sandy.putra0884@gmail.com"
+    className="hover:text-cyan-400 text-xl transition-colors duration-300"
+  >
+    <FaEnvelope />
+  </a>
+</div>
+
+
+    <a
+      href="#projects"
+      className="mt-10 inline-block px-6 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition"
+    >
+      View My Work
+    </a>
+  </div>
+
+  {/* Profile Image */}
+  <div className="relative z-10 mb-10 md:mb-0 md:-mt-24">
+    <div className="rounded-full w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-blue-400 shadow-lg shadow-blue-500/30 hover:scale-105 transition duration-300 overflow-hidden">
+      <img
+        alt="Profile"
+        src="/images/sandy.jpg"
+        className="object-cover w-full h-full"
+      />
+    </div>
+    <div className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-500 animate-ping opacity-20" />
+  </div>
+</section>
+
+
+
 
         {/* About */}
         <section id="about" className="py-24 bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl shadow-xl my-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-              I m Sandy, a Computer Engineering graduate from Universitas Diponegoro with a strong interest in UI/UX and high-performance web systems. I m currently focused on building scalable, accessible, and visually elegant applications.
-            </p>
+            Saya Sandy Tampubolon, lulusan Teknik Komputer Universitas Diponegoro dengan minat besar pada pengembangan solusi teknologi yang inklusif dan berdampak. Saya menyukai pengembangan aplikasi berbasis web, analis data, serta merancang sistem yang mengintegrasikan hardware dan software</p>
           </div>
         </section>
 
@@ -96,8 +124,7 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-              I’ve worked on various frontend and backend web projects, technical documentation, and system performance monitoring including internships and real-world collaborative projects.
-            </p>
+Belum memiliki pengalaman kerja resmi namun terbuka untuk peluang kerja dan kolaborasi di bidang teknologi informasi, terutama dalam pengembangan perangkat lunak dan analisis data.            </p>
           </div>
         </section>
 
@@ -106,8 +133,17 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">Projects</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-              My recent projects include a Human Resource Management System for INKOPDIT, a real-time sign language translator app, and a system performance dashboard.
-            </p>
+            Pembuatan Real-time Sign Language Class Translation System Using a Camera and Machine Learning Associated with Diponegoro University and Pusat Bahasa Isyarat Indonesia (Pusbisindo Jateng)            </p>
+            Tujuan: Membantu komunikasi antara penyandang tunarungu dengan masyarakat umum.
+            Teknologi: Python, OpenCV, MediaPipe, TensorFlow, React (UI), Django (Backend).
+            Hasil: Sistem mampu menerjemahkan gerakan tangan ke teks secara real-time. Dipilih sebagai salah satu proyek terbaik.
+            Tautan: GitHub Repository (opsional jika tersedia)
+            
+            Pengembangan Human Resource Management Web Application Associated with Diponegoro University dan perusahaan Cuco Indonesia
+            Posisi: Front-End Developer
+            Teknologi: HTML, CSS, JavaScript, Bootstrap
+            Deskripsi: Merancang UI dashboard dan komponen interaktif sistem HR berbasis web.
+            Hasil: Aplikasi digunakan oleh tim HR untuk efisiensi rekrutmen dan manajemen pegawai.          
           </div>
         </section>
 
@@ -116,8 +152,29 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">Tech Stack</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-              JavaScript, React, Next.js, Node.js, Tailwind CSS, PostgreSQL, Firebase, Git, REST APIs.
-            </p>
+            💡 Teknis
+Bahasa Pemrograman: JavaScript, Python, PHP, SQL
+
+Web Development: HTML5, CSS3, React.js, Tailwind CSS, Bootstrap
+
+Back-End (Dasar): -
+
+Analisis Data: Python (Pandas), SQL, Google Sheets
+
+Alat: Git & GitHub, Figma, VSCode, VirtualBox
+
+Hardware: Perakitan PC, Jaringan Virtual(cisco), Troubleshooting Komputer, Integrasi Hardware-Software
+
+🧠 Non-Teknis
+Komunikasi Efektif
+
+Kepemimpinan & Manajemen Tim
+
+Penyelesaian Masalah
+
+Ketelitian & Disiplin
+
+Kerja Sama Tim            </p>
           </div>
         </section>
 
@@ -125,7 +182,7 @@ export default function Home() {
         <section id="contact" className="py-24 text-center my-12">
           <h2 className="text-3xl font-bold mb-4 text-white">Contact</h2>
           <p className="text-lg text-gray-300">Let s build something great together!</p>
-          <p className="mt-2 text-gray-400">sandy@example.com</p>
+          <p className="mt-2 text-gray-400">sandy.putra0884@gmail.com</p>
         </section>
       </div>
     </main>

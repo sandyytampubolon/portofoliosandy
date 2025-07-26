@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.starry-bg {
+  background: #0a0a1f url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat;
+  animation: moveStars 200s linear infinite;
+}/* Optional custom style */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply font-sans bg-black text-white;
+  font-family: 'Inter', sans-serif;
+}
