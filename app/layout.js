@@ -1,11 +1,11 @@
 // app/layout.js
-import '../styles/Globals.css';
+import '../Styles/globals.css';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'My Portfolio',
+  title: 'My Portfolio',  
   description: 'Portofolio Site',
 };
 
