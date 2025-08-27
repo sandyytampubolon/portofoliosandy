@@ -126,22 +126,45 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
-            <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-CUCO INDONESIA - Jakarta Pusat, Indonesia Aug 2023 - Nov 2023
-Internship
-CUCO Indonesia (Credit Union Central of Indonesia), is a national-level secondary credit union cooperative based in Jakarta. It serves as 
-the national financial service center, providing support and services to Puskopdit (Regional Credit Union Centers) throughout Indonesia.
-Membantu perbaikan hardware yang ada dalam divisi IT
-Menyampaikan ide dan solusi untuk mengatasi permasalahan pengelolaan data karyawan yang masih manual dengan beralih ke sistem 
-berbasis website, yang dapat diakses oleh dua kategori pengguna, yaitu HRD dan karyawan
-Membuat perhitungan gaji secara otomatis dengan memasukkan faktor golongan, jam lembur, waktu cuti, tanggungan keluarga 
-karyawan, serta aspek terkait lainnya.
-Membuat Website Human Resource Management  </p>
-          </div>
-        </section>
+        <section
+  id="experience"
+  className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12"
+>
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
+    <p className="max-w-2xl mx-auto text-gray-300 text-lg">
+      Berikut adalah pengalaman saya
+    </p>
+  </div>
+
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    {/* Kolom Kiri - Gambar */}
+    <div className="flex justify-center">
+      <img
+        src="/your-image.jpg"
+        alt="Experience"
+        className="rounded-2xl shadow-lg w-full max-w-sm"
+      />
+    </div>
+
+    {/* Kolom Kanan - Deskripsi */}
+    <div className="text-left">
+      <h3 className="text-2xl font-semibold text-white mb-4">
+        Judul Pengalaman
+      </h3>
+      <p className="text-gray-300 text-lg mb-4">
+        Deskripsi pengalaman kamu bisa ditulis di sini. Gunakan teks yang
+        menjelaskan gambar di samping kiri agar lebih interaktif.
+      </p>
+      <ul className="list-disc list-inside text-gray-400 space-y-2">
+        <li>Mengelola proyek IT dengan tim lintas divisi</li>
+        <li>Membuat sistem berbasis website untuk HRD</li>
+        <li>Meningkatkan efisiensi operasional perusahaan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
         {/* Projects */}
         <section id="projects" className="py-24 bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-xl my-12">
