@@ -105,6 +105,12 @@ export default function Home() {
     </div>
     <div className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-500 animate-ping opacity-20" />
   </div>
+  <a
+      href="#projects"
+      className="mt-10 inline-block px-6 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition"
+    >
+      Coming soon, web masih dalam pengembangan lebih lanjut
+    </a>
 </section>
 
 
@@ -124,7 +130,16 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-Belum memiliki pengalaman kerja resmi namun terbuka untuk peluang kerja dan kolaborasi di bidang teknologi informasi, terutama dalam pengembangan perangkat lunak dan analisis data.            </p>
+CUCO INDONESIA - Jakarta Pusat, Indonesia Aug 2023 - Nov 2023
+Internship
+CUCO Indonesia (Credit Union Central of Indonesia), is a national-level secondary credit union cooperative based in Jakarta. It serves as 
+the national financial service center, providing support and services to Puskopdit (Regional Credit Union Centers) throughout Indonesia.
+Membantu perbaikan hardware yang ada dalam divisi IT
+Menyampaikan ide dan solusi untuk mengatasi permasalahan pengelolaan data karyawan yang masih manual dengan beralih ke sistem 
+berbasis website, yang dapat diakses oleh dua kategori pengguna, yaitu HRD dan karyawan
+Membuat perhitungan gaji secara otomatis dengan memasukkan faktor golongan, jam lembur, waktu cuti, tanggungan keluarga 
+karyawan, serta aspek terkait lainnya.
+Membuat Website Human Resource Management  </p>
           </div>
         </section>
 
