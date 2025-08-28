@@ -3,6 +3,12 @@
 import { useEffect, useState } from 'react';
 import Navbar from "../components/Navbar";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 
 export default function Home() {
   const [stars, setStars] = useState([]);
@@ -125,10 +131,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience */}
-        <section
+{/* Experience */}
+<section
   id="experience"
-  className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12"
+  className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12 relative"
 >
   <div className="text-center mb-12">
     <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
@@ -137,84 +143,260 @@ export default function Home() {
     </p>
   </div>
 
-  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-    {/* Kolom Kiri - Gambar */}
-    <div className="flex justify-center">
-      <img
-        src="/your-image.jpg"
-        alt="Experience"
-        className="rounded-2xl shadow-lg w-full max-w-sm"
-      />
+  {/* Timeline Wrapper */}
+  <div className="relative max-w-4xl mx-auto">
+    {/* Garis Tengah */}
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-500"></div>
+
+    {/* Timeline Item 1 - Data Analyst */}
+    <div className="relative flex items-start mb-16">
+      {/* Bulatan */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-6 h-6 rounded-full"></div>
+      
+      {/* Konten Card (kanan) */}
+      <div className="ml-auto w-1/2 pl-8">
+        <div className="bg-gray-800 border border-purple-600 rounded-xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-white mb-2">Software Development</h3>
+          <p className="text-gray-400 text-sm mb-2">
+            <strong>CUCO INDONESIA</strong> | Jakarta Pusat, Indonesia
+          </p>
+          <p className="text-gray-400 text-sm mb-4">Agustus 2023 - November 2023</p>
+         <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
+  <li>Membantu perbaikan hardware yang ada dalam divisi IT</li>
+  <li>
+    Menyampaikan ide dan solusi untuk mengatasi permasalahan pengelolaan data karyawan
+    yang masih manual dengan beralih ke sistem berbasis website, yang dapat diakses oleh dua kategori pengguna,
+    yaitu HRD dan karyawan
+  </li>
+  <li>
+    Membuat perhitungan gaji secara otomatis dengan memasukkan faktor golongan, jam lembur,
+    waktu cuti, tanggungan keluarga karyawan, serta aspek terkait lainnya
+  </li>
+  <li>Membuat Website Human Resource Management</li>
+</ul>
+
+
+        </div>
+      </div>
     </div>
 
-    {/* Kolom Kanan - Deskripsi */}
-    <div className="text-left">
-      <h3 className="text-2xl font-semibold text-white mb-4">
-        Judul Pengalaman
-      </h3>
-      <p className="text-gray-300 text-lg mb-4">
-        Deskripsi pengalaman kamu bisa ditulis di sini. Gunakan teks yang
-        menjelaskan gambar di samping kiri agar lebih interaktif.
-      </p>
-      <ul className="list-disc list-inside text-gray-400 space-y-2">
-        <li>Mengelola proyek IT dengan tim lintas divisi</li>
-        <li>Membuat sistem berbasis website untuk HRD</li>
-        <li>Meningkatkan efisiensi operasional perusahaan</li>
-      </ul>
+    {/* Timeline Item 2 - Developer Pusbisindo */}
+    <div className="relative flex items-start mb-16">
+      {/* Bulatan */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-6 h-6 rounded-full"></div>
+      
+      {/* Konten Card (kiri) */}
+      <div className="mr-auto w-1/2 pr-8 text-left">
+      
+        <div className="bg-gray-800 border border-purple-600 rounded-xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-white mb-2">Software Development</h3>
+          <p className="text-gray-400 text-sm mb-2">
+            <strong>PUSBISINDO</strong> | Jakarta Selatan, Indonesia
+          </p>
+          <p className="text-gray-400 text-sm mb-4">September 2024 - Juni 2025</p>
+          <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
+  <li>Membantu proses komunikasi dalam pembelajaran secara online</li>
+  <li>
+    Efisiensi biaya terkait tenaga kerja menjadi lebih sedikit dimana tidak perlu banyak pengajar karena sudah ada tools penerjemah dimana 
+orang awam juga bisa mengaksesnya
+  </li>
+  <li>
+Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Diponegoro  </li>
+  <li>Membuat Website Video Conference dengan fitur Penerjemah Bahasa Isyarat Tangan secara Online</li>
+    <li>Membangun jembatan interaksi antara disabilitas dan non-disabilitas</li>
+
+</ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-        {/* Projects */}
-        <section id="projects" className="py-24 bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-xl my-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 text-white">Projects</h2>
-            <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            Pembuatan Real-time Sign Language Class Translation System Using a Camera and Machine Learning Associated with Diponegoro University and Pusat Bahasa Isyarat Indonesia (Pusbisindo Jateng)            </p>
-            Tujuan: Membantu komunikasi antara penyandang tunarungu dengan masyarakat umum.
-            Teknologi: Python, OpenCV, MediaPipe, TensorFlow, React (UI), Django (Backend).
-            Hasil: Sistem mampu menerjemahkan gerakan tangan ke teks secara real-time. Dipilih sebagai salah satu proyek terbaik.
-            Tautan: GitHub Repository (opsional jika tersedia)
-            
-            Pengembangan Human Resource Management Web Application Associated with Diponegoro University dan perusahaan Cuco Indonesia
-            Posisi: Front-End Developer
-            Teknologi: HTML, CSS, JavaScript, Bootstrap
-            Deskripsi: Merancang UI dashboard dan komponen interaktif sistem HR berbasis web.
-            Hasil: Aplikasi digunakan oleh tim HR untuk efisiensi rekrutmen dan manajemen pegawai.          
+
+
+{/* Projects */}
+<section id="projects" className="py-24 bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-xl my-12">
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold mb-4 text-white">Projects</h2>
+    <p className="max-w-2xl mx-auto text-gray-300 text-lg">
+      Berikut adalah beberapa project yang pernah saya kerjakan
+    </p>
+  </div>
+
+  {/* Swiper Carousel */}
+  <div className="max-w-6xl mx-auto">
+    <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={30}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      breakpoints={{
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      className="pb-12"
+    >
+      {/* Card 1 */}
+      <SwiperSlide>
+<div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
+          <img src="/images/sandy.jpg" alt="Sign Language System" className="w-full h-48 object-cover" />
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
+              Portofolio Saya
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 text-justify">
+              Deskripsi diri, pengalaman, project dan skill 
+            </p>
+            <a href="https://github.com/sandyytampubolon/portofoliosandy" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
           </div>
-        </section>
+        </div>
+      </SwiperSlide>
 
-        {/* Skills */}
-        <section id="skills" className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 text-white">Tech Stack</h2>
-            <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            💡 Teknis
-Bahasa Pemrograman: JavaScript, Python, PHP, SQL
-
-Web Development: HTML5, CSS3, React.js, Tailwind CSS, Bootstrap
-
-Back-End (Dasar): -
-
-Analisis Data: Python (Pandas), SQL, Google Sheets
-
-Alat: Git & GitHub, Figma, VSCode, VirtualBox
-
-Hardware: Perakitan PC, Jaringan Virtual(cisco), Troubleshooting Komputer, Integrasi Hardware-Software
-
-🧠 Non-Teknis
-Komunikasi Efektif
-
-Kepemimpinan & Manajemen Tim
-
-Penyelesaian Masalah
-
-Ketelitian & Disiplin
-
-Kerja Sama Tim            </p>
+      {/* Card 2 */}
+      <SwiperSlide>
+<div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
+          <img src="/images/sandy.jpg" alt="HRM Web App" className="w-full h-48 object-cover" />
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
+              Website Human Resource Management Cuco Indonesia
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 text-justify">
+              Website Human Resource Cuco Indonesia
+            </p>
+            <a href="https://github.com/sandyytampubolon" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
           </div>
-        </section>
+        </div>
+      </SwiperSlide>
+
+      {/* Card 3 */}
+      <SwiperSlide>
+<div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
+           <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
+              Website Video Conference dengan Sistem Penerjemah Bahasa Isyarat Tangan
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 text-justify">
+              Website ini menyediakan layanan video conference dengan fitur penerjemah bahasa isyarat tangan secara real-time
+            </p>
+            <a href="https://github.com/sandyytampubolon" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
+          </div>
+        </div>
+      </SwiperSlide>
+
+      {/* Card 4 */}
+      <SwiperSlide>
+<div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
+           <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
+              Next Project
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 text-justify">
+              Lets collab...
+            </p>
+            <a href="https://github.com/sandyytampubolon" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
+          </div>
+        </div>
+      </SwiperSlide>
+      {/* Tambahkan card lain tinggal copy <SwiperSlide> */}
+    </Swiper>
+  </div>
+</section>
+
+
+
+        {/*Skill Section -->*/}
+<section id="skills" class="py-20 bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-xl">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+      Skills
+    </h2>
+    <p class="max-w-2xl mx-auto text-gray-400 text-lg mt-4">
+      Berikut adalah beberapa teknologi dan tools yang saya gunakan dalam pengembangan.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    
+    {/*frontend -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Frontend</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">HTML</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">CSS</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">JavaScript</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">TypeScript</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Next.js</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">React</span>
+      </div>
+    </div>
+
+    {/*Skill Section -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Backend</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PHP</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Laravel</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Node.js</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Django</span>
+      </div>
+    </div>
+
+    {/*Skill Section -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Database</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">MySQL</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PostgreSQL</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Supabase</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">SQLite</span>
+      </div>
+    </div>
+
+  </div>
+
+ {/*Skill Section -->*/}
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-8">
+    
+{/*Skill Section -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Machine Learning</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">TensorFlow</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PyTorch</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Scikit-learn</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Pandas</span>
+      </div>
+    </div>
+
+{/*Skill Section -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Cloud & DevOps</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Docker</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Kubernetes</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">AWS</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Vercel</span>
+      </div>
+    </div>
+
+{/*Skill Section -->*/}
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Tools</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Git</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">GitHub</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Postman</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Figma</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
         {/* Contact */}
         <section id="contact" className="py-24 text-center my-12">
