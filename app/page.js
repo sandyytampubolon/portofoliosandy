@@ -292,6 +292,22 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
            <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
           <div className="p-6 text-left">
             <h3 className="text-xl font-bold text-white mb-2">
+              Data Analyst
+            </h3>
+            <p className="text-gray-400 text-sm mb-4 text-justify">
+              Analyze supermarket sales data, Filter data by Branch, Product Line, Payment Method, and Date Range
+            </p>
+            <a href="https://sandyytampubolon-dataanalystdashboard-app-peypfu.streamlit.app/?embed_options=show_colored_line,light_theme,show_toolbar,show_padding,show_footer" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">Visit</a>
+          </div>
+        </div>
+      </SwiperSlide>
+
+      {/* Card 5 */}
+      <SwiperSlide>
+<div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
+           <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
               Next Project
             </h3>
             <p className="text-gray-400 text-sm mb-4 text-justify">
