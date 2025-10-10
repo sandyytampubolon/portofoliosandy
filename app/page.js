@@ -8,6 +8,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Analytics } from "@vercel/analytics/next"
+import MiniPlayer from "../components/MiniPlayer";
 
 
 export default function Home() {
@@ -26,6 +28,8 @@ export default function Home() {
   return (
     <main className="scroll-smooth bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-white">
       <div className="container mx-auto px-4">
+        {/* MiniPlayer muncul di sini */}
+      <MiniPlayer />
         {/* Navbar */}
         <Navbar />
 
@@ -241,7 +245,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       {/* Card 1 */}
       <SwiperSlide>
 <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
-          <img src="/images/sandy.jpg" alt="Sign Language System" className="w-full h-48 object-cover" />
+          <img src="/images/myporto.jpg" alt="Sign Language System" className="w-full h-48 object-cover" />
           <div className="p-6 text-left">
             <h3 className="text-xl font-bold text-white mb-2">
               Portofolio Saya
@@ -257,7 +261,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       {/* Card 2 */}
       <SwiperSlide>
 <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
-          <img src="/images/sandy.jpg" alt="HRM Web App" className="w-full h-48 object-cover" />
+          <img src="/images/inkopdit.jpg" alt="HRM Web App" className="w-full h-48 object-cover" />
           <div className="p-6 text-left">
             <h3 className="text-xl font-bold text-white mb-2">
               Website Human Resource Management Cuco Indonesia
@@ -265,7 +269,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
             <p className="text-gray-400 text-sm mb-4 text-justify">
               Website Human Resource Cuco Indonesia
             </p>
-            <a href="https://github.com/sandyytampubolon" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
+            <a href="https://github.com/sandyytampubolon/webhrmcuco" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
           </div>
         </div>
       </SwiperSlide>
@@ -273,7 +277,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       {/* Card 3 */}
       <SwiperSlide>
 <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
-           <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
+           <img src="/images/demoslc.jpg" alt="myporto web app" className="w-full h-48 object-cover" />
           <div className="p-6 text-left">
             <h3 className="text-xl font-bold text-white mb-2">
               Website Video Conference dengan Sistem Penerjemah Bahasa Isyarat Tangan
@@ -281,7 +285,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
             <p className="text-gray-400 text-sm mb-4 text-justify">
               Website ini menyediakan layanan video conference dengan fitur penerjemah bahasa isyarat tangan secara real-time
             </p>
-            <a href="https://github.com/sandyytampubolon" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
+                        <a href="https://github.com/sandyytampubolon/webhrmcuco" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
           </div>
         </div>
       </SwiperSlide>
@@ -289,7 +293,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       {/* Card 4 */}
       <SwiperSlide>
 <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-purple-700 h-[420px] flex flex-col"> 
-           <img src="/images/sandy.jpg" alt="Spam Detection" className="w-full h-48 object-cover" />
+           <img src="/images/dataanalyst.png" alt="Spam Detection" className="w-full h-48 object-cover" />
           <div className="p-6 text-left">
             <h3 className="text-xl font-bold text-white mb-2">
               Data Analyst
@@ -366,9 +370,10 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       <h3 class="text-xl font-bold text-white mb-4 text-center">Database</h3>
       <div class="grid grid-cols-2 gap-3">
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">MySQL</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PostgreSQL</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Supabase</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">SQLite</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">MongoDB</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Oracle</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Phpmyadmin</span>
+
       </div>
     </div>
 
@@ -382,9 +387,6 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       <h3 class="text-xl font-bold text-white mb-4 text-center">Machine Learning</h3>
       <div class="grid grid-cols-2 gap-3">
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">TensorFlow</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PyTorch</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Scikit-learn</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Pandas</span>
       </div>
     </div>
 
@@ -392,9 +394,6 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
     <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
       <h3 class="text-xl font-bold text-white mb-4 text-center">Cloud & DevOps</h3>
       <div class="grid grid-cols-2 gap-3">
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Docker</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Kubernetes</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">AWS</span>
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Vercel</span>
       </div>
     </div>
@@ -405,8 +404,12 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
       <div class="grid grid-cols-2 gap-3">
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Git</span>
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">GitHub</span>
-        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Postman</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Visual Studio</span>
         <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Figma</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">Microsoft Office</span>
+        <span class="px-3 py-2 bg-gray-900 rounded-lg text-gray-300 text-center">PowerBI</span>
+
+
       </div>
     </div>
 
