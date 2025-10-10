@@ -285,7 +285,7 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
             <p className="text-gray-400 text-sm mb-4 text-justify">
               Website ini menyediakan layanan video conference dengan fitur penerjemah bahasa isyarat tangan secara real-time
             </p>
-                        <a href="https://github.com/sandyytampubolon/webhrmcuco" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
+                        <a href="https://github.com/VinGreg/slc_new" className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg">GitHub</a>
           </div>
         </div>
       </SwiperSlide>

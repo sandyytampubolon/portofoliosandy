@@ -3,12 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function MiniPlayer() {
-  const playerRef = useRef(null);
-  const [currentVideo, setCurrentVideo] = useState({
-    videoId: "YBt1MjweYjA",
-    title: "Example Song",
-    thumbnail: "https://img.youtube.com/vi/YBt1MjweYjA/hqdefault.jpg",
-  });
+ const [currentVideo, setCurrentVideo] = useState({
+  videoId: "IW0QkXpQs3k",
+  title: "Nama Lagu Kamu", // bisa ganti sesuai judul
+  thumbnail: "https://img.youtube.com/vi/IW0QkXpQs3k/hqdefault.jpg",
+});
 
   useEffect(() => {
     // Tambahkan YouTube IFrame API
