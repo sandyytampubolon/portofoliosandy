@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Analytics } from "@vercel/analytics/next"
-import MiniPlayer from "../components/MiniPlayer";
+
 
 
 export default function Home() {
@@ -28,8 +28,7 @@ export default function Home() {
   return (
     <main className="scroll-smooth bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-white">
       <div className="container mx-auto px-4">
-        {/* MiniPlayer muncul di sini */}
-      <MiniPlayer />
+
         {/* Navbar */}
         <Navbar />
 
@@ -131,7 +130,13 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            Saya Sandy Tampubolon, lulusan Teknik Komputer Universitas Diponegoro dengan minat besar pada pengembangan solusi teknologi yang inklusif dan berdampak. Saya menyukai pengembangan aplikasi berbasis web, analis data, serta merancang sistem yang mengintegrasikan hardware dan software</p>
+            Saya adalah lulusan S-1 Teknik Komputer Universitas Diponegoro dengan pengalaman magang dan proyek di
+bidang IT, software engineering, data management, serta pengembangan sistem berbasis website. Kompetensi
+saya meliputi perencanaan proyek yang berdasarkan agile method, pengembangan perangkat lunak dan keras, AI
+dan analisis data, serta manajemen database dan administrasi sistem, yang mendukung minat saya untuk berkarier
+sebagai Fullstack Developer, IT & Software/Hardware Engineer, Data Analyst dan bidang lain yang terkait dengan
+computer technology. Saya terbuka untuk mempelajari keterampilan baru, cepat beradaptasi dengan
+lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif</p>
           </div>
         </section>
 
@@ -213,6 +218,38 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
         </div>
       </div>
     </div>
+
+        {/* Timeline Item 1 - Data Analyst */}
+    <div className="relative flex items-start mb-16">
+      {/* Bulatan */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-6 h-6 rounded-full"></div>
+      
+      {/* Konten Card (kanan) */}
+      <div className="ml-auto w-1/2 pl-8">
+        <div className="bg-gray-800 border border-purple-600 rounded-xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-white mb-2">Administration & Database</h3>
+          <p className="text-gray-400 text-sm mb-2">
+            <strong>UPTD SMP NEGERI 8 PEMATANGSIANTAR</strong> | Pematangsiantar, Sumatera Utara, Indonesia
+          </p>
+          <p className="text-gray-400 text-sm mb-4">Juli 2022 - Juni 2024</p>
+         <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
+  <li>Mengelola, memvalidasi, dan memperbarui lebih dari 800+ data siswa yang mencakup identitas pribadi, capaian
+akademik, serta prestasi, sehingga mendukung penyusunan laporan sekolah yang akurat</li>
+  <li>
+    Menangani administrasi penerimaan siswa baru dengan melakukan input, verifikasi, serta penyusunan database
+untuk lebih dari 8x32 atau 256 peserta didik per tahun
+  </li>
+  <li>
+    Mendukung administrasi sarana dan prasarana sekolah melalui pendataan inventaris, serta penyusunan
+kebutuhan perawatan secara berkala
+  </li>
+</ul>
+
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
