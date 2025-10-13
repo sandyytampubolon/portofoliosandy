@@ -32,13 +32,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800 shadow-md px-6 py-2">
-      <div className="container mx-auto flex items-center justify-between h-14">
-        
+<nav className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800 shadow-md px-4 py-1 md:py-2">
+  <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 md:gap-3 min-h-[56px]">
+
         {/* === KIRI: Logo + MiniPlayer + Time/Date === */}
-        <div className="flex items-center gap-4">
+<div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto justify-center md:justify-start">
           {/* Logo */}
-          <div className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+          <div className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
             Sandy Portfolio
           </div>
 
@@ -46,13 +46,13 @@ export default function Navbar() {
           <MiniPlayer />
 
           {/* Time + Date Display */}
-          <div className="flex items-center gap-3 ml-24 px-3 py-1 rounded-full bg-black/40 border border-gray-700 shadow-sm text-white text-sm font-medium">
+          <div className="flex items-center gap-3 ml-2 md:ml-6 px-3 py-1 rounded-full bg-black/40 border border-gray-700 shadow-sm text-white text-xs md:text-sm font-medium">
             <div className="flex items-center gap-1 text-cyan-300">
-              <Clock size={16} className="text-purple-400" />
+              <Clock size={14} className="text-purple-400" />
               <span>{time}</span>
             </div>
             <div className="flex items-center gap-1 text-purple-300">
-              <CalendarDays size={16} className="text-cyan-400" />
+              <CalendarDays size={14} className="text-cyan-400" />
               <span>{date}</span>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function Navbar() {
         </ul>
 
         {/* === Mobile Menu Button === */}
-        <div className="md:hidden">
+        <div className="md:hidden ml-auto">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
