@@ -6,8 +6,10 @@ import MiniPlayer from "../components/MiniPlayer";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [time, setTime] = useState('');
   const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -18,25 +20,48 @@ export default function Navbar() {
     { id: 'contact', label: 'Contact' },
   ];
 
-  // Update waktu & tanggal setiap detik
+  // Set tanggal saat mount
+  useEffect(() => {
+    const now = new Date();
+    const optionsDate = { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' };
+    setDate(now.toLocaleDateString('en-GB', optionsDate));
+  }, []);
+
+  // Update jam tiap menit
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const optionsDate = { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' };
-      setDate(now.toLocaleDateString('en-GB', optionsDate));
-      setTime(now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+      const formattedTime = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      setTime(formattedTime);
     };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
+    updateTime(); // set initial
+    const interval = setInterval(updateTime, 60000); // update tiap menit
     return () => clearInterval(interval);
   }, []);
 
-  return (
-<nav className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800 shadow-md px-4 py-1 md:py-2">
-  <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 md:gap-3 min-h-[56px]">
+  // Handle scroll untuk hide navbar di mobile
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && window.innerWidth < 768) {
+        // scroll down
+        setShowNav(false);
+      } else {
+        // scroll up
+        setShowNav(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
-        {/* === KIRI: Logo + MiniPlayer + Time/Date === */}
-<div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto justify-center md:justify-start">
+  return (
+    <nav className={`sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800 shadow-md px-4 py-1 md:py-2 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 md:gap-3 min-h-[56px]">
+
+        {/* === KIRI: Logo + MiniPlayer + Date/Time === */}
+        <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full md:w-auto justify-center md:justify-start">
           {/* Logo */}
           <div className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
             Sandy Portfolio
@@ -49,7 +74,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 ml-2 md:ml-6 px-3 py-1 rounded-full bg-black/40 border border-gray-700 shadow-sm text-white text-xs md:text-sm font-medium">
             <div className="flex items-center gap-1 text-cyan-300">
               <Clock size={14} className="text-purple-400" />
-              <span>{time}</span>
+              <span>{time}</span> {/* update tiap menit */}
             </div>
             <div className="flex items-center gap-1 text-purple-300">
               <CalendarDays size={14} className="text-cyan-400" />
