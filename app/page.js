@@ -114,12 +114,12 @@ export default function Home() {
     </div>
     <div className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-500 animate-ping opacity-20" />
   </div>
-  <a
+  {/* <a
       href="#projects"
       className="mt-10 inline-block px-6 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-black transition"
     >
       Coming soon, web masih dalam pengembangan lebih lanjut
-    </a>
+    </a> */}
 </section>
 
 
@@ -130,13 +130,10 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
             <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            Saya adalah lulusan S-1 Teknik Komputer Universitas Diponegoro dengan pengalaman magang dan proyek di
-bidang IT, software engineering, data management, serta pengembangan sistem berbasis website. Kompetensi
-saya meliputi perencanaan proyek yang berdasarkan agile method, pengembangan perangkat lunak dan keras, AI
-dan analisis data, serta manajemen database dan administrasi sistem, yang mendukung minat saya untuk berkarier
-sebagai Fullstack Developer, IT & Software/Hardware Engineer, Data Analyst dan bidang lain yang terkait dengan
-computer technology. Saya terbuka untuk mempelajari keterampilan baru, cepat beradaptasi dengan
-lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif</p>
+           Bachelor of Computer Engineering graduate with a strong understanding of IT, software engineering, and data 
+analysis. Experienced in academic projects involving the development of a Human Resource Management 
+website, a Sign Language Class website with automatic hand-sign translation features, and a personal project 
+generating company income insights</p>
           </div>
         </section>
 
@@ -148,7 +145,7 @@ lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif</p>
   <div className="text-center mb-12">
     <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
     <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-      Berikut adalah pengalaman saya
+      Work Experience
     </p>
   </div>
 
@@ -169,19 +166,29 @@ lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif</p>
           <p className="text-gray-400 text-sm mb-2">
             <strong>CUCO INDONESIA</strong> | Jakarta Pusat, Indonesia
           </p>
-          <p className="text-gray-400 text-sm mb-4">Agustus 2023 - November 2023</p>
+          <p className="text-gray-400 text-sm mb-4">Aug 2023 - Nov 2023</p>
          <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
-  <li>Membantu perbaikan hardware yang ada dalam divisi IT</li>
+
   <li>
-    Menyampaikan ide dan solusi untuk mengatasi permasalahan pengelolaan data karyawan
-    yang masih manual dengan beralih ke sistem berbasis website, yang dapat diakses oleh dua kategori pengguna,
-    yaitu HRD dan karyawan
+    Performed troubleshooting and hardware maintenance in the IT division to ensure smooth company 
+operations.
   </li>
   <li>
-    Membuat perhitungan gaji secara otomatis dengan memasukkan faktor golongan, jam lembur,
-    waktu cuti, tanggungan keluarga karyawan, serta aspek terkait lainnya
+    Initiated an innovation project after identifying that employee data and payroll management were still 
+conducted manually using separate spreadsheets, which caused administrative delays and frequent input 
+errors.
   </li>
-  <li>Membuat Website Human Resource Management</li>
+  <li>
+    Solved the issue by developing a web-based Human Resource Management (HRM) system as a centralized 
+platform for both HR and employees, featuring separate access levels based on user roles. The system also 
+included an automated payroll calculation module based on predefined variables, successfully reducing 
+potential human errors by up to 90% compared to the previous manual system.
+  </li>
+  <li>
+    Designed and developed an interactive website using PHP, JavaScript, HTML, and CSS, with MySQL as 
+the main database
+  </li>
+
 </ul>
 
 
@@ -202,17 +209,22 @@ lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif</p>
           <p className="text-gray-400 text-sm mb-2">
             <strong>PUSBISINDO</strong> | Jakarta Selatan, Indonesia
           </p>
-          <p className="text-gray-400 text-sm mb-4">September 2024 - Juni 2025</p>
+          <p className="text-gray-400 text-sm mb-4">Sep 2024 - Jun 2025</p>
           <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
-  <li>Membantu proses komunikasi dalam pembelajaran secara online</li>
+  <li>Designed and developed a Machine Learning–based Video Conference Website capable of automatically 
+translating hand sign language to support communication between users with disabilities (deaf/mute) and 
+non-disabled users. The project was tested by more than 10 users under the supervision of academic 
+advisors from Diponegoro University to ensure system reliability and user experience. The website 
+successfully improved accessibility and reduced operational costs by minimizing the need for special 
+teaching staff without compromising the quality of online learning. The website was developed using 
+machine learning technology integrated with a camera system, and was awarded 2nd Place in the Best Final 
+Project Competition of the Computer Engineering Department, Diponegoro University, 2025.
+</li>
   <li>
-    Efisiensi biaya terkait tenaga kerja menjadi lebih sedikit dimana tidak perlu banyak pengajar karena sudah ada tools penerjemah dimana 
-orang awam juga bisa mengaksesnya
+    Developed a website using Python (Django Framework), JavaScript, and HTML, supported by MongoDB 
+as the main database, which significantly improved system efficiency and streamlined user data 
+management
   </li>
-  <li>
-Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Diponegoro  </li>
-  <li>Membuat Website Video Conference dengan fitur Penerjemah Bahasa Isyarat Tangan secara Online</li>
-    <li>Membangun jembatan interaksi antara disabilitas dan non-disabilitas</li>
 
 </ul>
         </div>
@@ -231,17 +243,17 @@ Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Dipo
           <p className="text-gray-400 text-sm mb-2">
             <strong>UPTD SMP NEGERI 8 PEMATANGSIANTAR</strong> | Pematangsiantar, Sumatera Utara, Indonesia
           </p>
-          <p className="text-gray-400 text-sm mb-4">Juli 2022 - Juni 2024</p>
+          <p className="text-gray-400 text-sm mb-4">Jul 2022 - Jun 2024</p>
          <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-2 text-justify">
-  <li>Mengelola, memvalidasi, dan memperbarui lebih dari 800+ data siswa yang mencakup identitas pribadi, capaian
-akademik, serta prestasi, sehingga mendukung penyusunan laporan sekolah yang akurat</li>
+  <li>Conducted data analysis and validated more than 800 student records and 60 teacher and staff records using 
+Microsoft Excel, including updating academic reports and managing school inventory data. The validated 
+results were used in school decision-making processes. Collaborated with the school operator and student 
+affairs team to ensure all data remained accurate and easily accessible. Observing challenges in the previous 
+manual process, which was prone to errors and time-consuming, took the initiative to analyze student 
+admission trends using Power BI, producing visual reports and insights that helped the school make datadriven decisions. This initiative improved data management efficiency by 40%.
+</li>
   <li>
-    Menangani administrasi penerimaan siswa baru dengan melakukan input, verifikasi, serta penyusunan database
-untuk lebih dari 8x32 atau 256 peserta didik per tahun
-  </li>
-  <li>
-    Mendukung administrasi sarana dan prasarana sekolah melalui pendataan inventaris, serta penyusunan
-kebutuhan perawatan secara berkala
+    Utilized Microsoft Excel for data management and validation, and Power BI for generating insights
   </li>
 </ul>
 
@@ -261,7 +273,7 @@ kebutuhan perawatan secara berkala
   <div className="text-center mb-12">
     <h2 className="text-3xl font-bold mb-4 text-white">Projects</h2>
     <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-      Berikut adalah beberapa project yang pernah saya kerjakan
+      Here are some projects I have worked on
     </p>
   </div>
 
