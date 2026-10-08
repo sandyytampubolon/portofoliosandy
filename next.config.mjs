@@ -1,18 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    eslint: {
-    // Memperingatkan ESLint agar tidak menghentikan build jika ada error
-    ignoreDuringBuilds: true,
+  eslint: {
+    // Aktifkan ESLint untuk mendeteksi real error
+    ignoreDuringBuilds: false,
   },
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'storage.googleapis.com',
-        },
-      ],
-    },
-  };
-  
-  export default nextConfig;
-  
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+      },
+    ],
+  },
+};
+
+export default nextConfig;
