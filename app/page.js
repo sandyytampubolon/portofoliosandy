@@ -410,7 +410,7 @@ const [stars, setStars] = useState([]);
                       href="#contact"
                       className="inline-block px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium rounded-lg transition"
                     >
-                      Let's Talk
+                      Lets Talk
                     </a>
                   </div>
                 </div>
@@ -509,7 +509,7 @@ const [stars, setStars] = useState([]);
 
         {/* CONTACT SECTION */}
         <section id="contact" className="py-20 text-center my-12 bg-gradient-to-r from-gray-900/50 to-black rounded-2xl border border-gray-800 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Let's Connect</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Lets Connect</h2>
           <p className="text-base md:text-lg text-gray-300 max-w-md mx-auto">
             I am always open to discussing new software development opportunities or potential collaborations.
           </p>
