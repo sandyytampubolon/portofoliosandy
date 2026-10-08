@@ -115,154 +115,117 @@ const [stars, setStars] = useState([]);
           </div>
         </section>
 
-        {/* ABOUT SECTION */}
-        <section id="about" className="py-16 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-xl my-12 px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">About Me</h2>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Bachelor of Computer Engineering graduate with a strong understanding of IT, software engineering, and data 
-              analysis. Experienced in academic and professional projects involving the development of a Human Resource Management 
-              website, a Sign Language Video Conference platform with automatic hand-sign translation features, and interactive data analytics dashboards.
+{/* About */}
+        <section id="about" className="py-16 md:py-24 bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl shadow-xl my-12 px-4 md:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
+            <p className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg text-justify md:text-center leading-relaxed">
+              Saya adalah lulusan S-1 Teknik Komputer Universitas Diponegoro dengan pengalaman magang dan proyek di
+              bidang IT, software engineering, data management, serta pengembangan sistem berbasis website. Kompetensi
+              saya meliputi perencanaan proyek yang berdasarkan agile method, pengembangan perangkat lunak dan keras, AI
+              dan analisis data, serta manajemen database dan administrasi sistem, yang mendukung minat saya untuk berkarier
+              sebagai Fullstack Developer, IT & Software/Hardware Engineer, Data Analyst dan bidang lain yang terkait dengan
+              computer technology. Saya terbuka untuk mempelajari keterampilan baru, cepat beradaptasi dengan
+              lingkungan kerja, serta mampu berkolaborasi dan berkomunikasi secara efektif.
             </p>
           </div>
         </section>
 
-        {/* EXPERIENCE SECTION */}
+        {/* Experience */}
         <section
           id="experience"
-          className="py-20 bg-gradient-to-b from-gray-900 to-gray-950 rounded-2xl shadow-2xl my-12 relative overflow-hidden"
+          className="py-16 md:py-24 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-xl my-12 relative px-4 md:px-8"
         >
-          <div className="text-center mb-16 px-4">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-              Professional Experience
-            </h2>
-            <p className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg">
-              Delivering scalable solutions and driving engineering excellence.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
+            <p className="max-w-2xl mx-auto text-gray-300 text-base md:text-lg">
+              Berikut adalah pengalaman saya
             </p>
           </div>
 
-          <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
-            {/* Timeline Vertical Line: Kiri di Mobile, Tengah di Desktop */}
-            <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 via-blue-500 to-gray-900 rounded-full"></div>
+          {/* Timeline Wrapper */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Garis Vertikal: Di Kiri untuk HP, Di Tengah untuk Desktop */}
+            <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-500 rounded-full"></div>
 
-            {/* Experience Item 1 - CUCO */}
-            <div className="relative flex items-start mb-16 group">
-              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 group-hover:border-blue-400 group-hover:scale-110 transition-all duration-300 w-5 h-5 rounded-full mt-6 z-10"></div>
+            {/* Timeline Item 1 - CUCO */}
+            <div className="relative flex items-start mb-12 md:mb-16">
+              {/* Bulatan */}
+              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-5 h-5 md:w-6 md:h-6 rounded-full mt-6 md:mt-8 z-10"></div>
               
-              <div className="w-full md:w-1/2 ml-auto pl-12 md:pl-10">
-                <div className="bg-gray-800/60 backdrop-blur-md border border-gray-700 hover:border-purple-500/50 rounded-2xl p-6 shadow-xl transition-all">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white">Software Engineer</h3>
-                      <p className="text-purple-400 font-medium text-sm mt-0.5">CUCO INDONESIA | Jakarta Pusat</p>
-                    </div>
-                    <span className="text-gray-400 text-xs font-semibold mt-2 sm:mt-0 bg-gray-900 px-3 py-1 rounded-full border border-gray-700 w-max">
-                      Aug 2023 - Nov 2023
-                    </span>
-                  </div>
-                  
-                  <ul className="list-none text-gray-300 text-sm leading-relaxed space-y-2.5">
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">▹</span>
-                      <span>Engineered a centralized web-based Human Resource Management System (HRMS) featuring Role-Based Access Control (RBAC).</span>
+              {/* Konten Card (Kanan di Desktop, Full di HP) */}
+              <div className="w-full md:w-1/2 md:ml-auto pl-14 md:pl-10">
+                <div className="bg-gray-800 border border-purple-600 rounded-xl p-5 md:p-6 shadow-lg hover:shadow-purple-500/20 transition duration-300">
+                  <h3 className="text-xl font-bold text-white mb-1">Software Development</h3>
+                  <p className="text-gray-400 text-sm mb-1">
+                    <strong>CUCO INDONESIA</strong> | Jakarta Pusat, Indonesia
+                  </p>
+                  <p className="text-purple-400 font-semibold text-xs mb-4">Agustus 2023 - November 2023</p>
+                  <ul className="list-disc list-inside text-gray-300 text-sm md:text-base leading-relaxed space-y-2 text-justify">
+                    <li>Membantu perbaikan hardware yang ada dalam divisi IT</li>
+                    <li>
+                      Menyampaikan ide dan solusi untuk mengatasi permasalahan pengelolaan data karyawan
+                      yang masih manual dengan beralih ke sistem berbasis website, yang dapat diakses oleh dua kategori pengguna,
+                      yaitu HRD dan karyawan
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">▹</span>
-                      <span>Developed an automated payroll calculation module, reducing administrative overhead and human error by up to 90%.</span>
+                    <li>
+                      Membuat perhitungan gaji secara otomatis dengan memasukkan faktor golongan, jam lembur,
+                      waktu cuti, tanggungan keluarga karyawan, serta aspek terkait lainnya
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">▹</span>
-                      <span>Provided responsive IT support and hardware maintenance, ensuring smooth operational continuity.</span>
-                    </li>
+                    <li>Membuat Website Human Resource Management</li>
                   </ul>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {['PHP', 'JavaScript', 'MySQL', 'HTML/CSS'].map((tech) => (
-                      <span key={tech} className="text-xs font-medium text-blue-300 bg-blue-900/30 px-2.5 py-1 rounded-md border border-blue-800/50">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Experience Item 2 - PUSBISINDO */}
-            <div className="relative flex items-start mb-16 group">
-              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-blue-500 group-hover:border-purple-400 group-hover:scale-110 transition-all duration-300 w-5 h-5 rounded-full mt-6 z-10"></div>
+            {/* Timeline Item 2 - PUSBISINDO */}
+            <div className="relative flex items-start mb-12 md:mb-16">
+              {/* Bulatan */}
+              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-5 h-5 md:w-6 md:h-6 rounded-full mt-6 md:mt-8 z-10"></div>
               
-              <div className="w-full md:w-1/2 mr-auto pl-12 md:pl-0 md:pr-10">
-                <div className="bg-gray-800/60 backdrop-blur-md border border-gray-700 hover:border-blue-500/50 rounded-2xl p-6 shadow-xl transition-all">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white">Fullstack Developer</h3>
-                      <p className="text-blue-400 font-medium text-sm mt-0.5">PUSBISINDO | Jakarta Selatan</p>
-                    </div>
-                    <span className="text-gray-400 text-xs font-semibold mt-2 sm:mt-0 bg-gray-900 px-3 py-1 rounded-full border border-gray-700 w-max">
-                      Sep 2024 - Jun 2025
-                    </span>
-                  </div>
-                  
-                  <ul className="list-none text-gray-300 text-sm leading-relaxed space-y-2.5">
-                    <li className="flex items-start">
-                      <span className="text-blue-400 mr-2">▹</span>
-                      <span>Architected an ML-powered video conferencing platform with real-time sign language translation for accessibility.</span>
+              {/* Konten Card (Kiri di Desktop, Full di HP) */}
+              <div className="w-full md:w-1/2 md:mr-auto pl-14 md:pl-0 md:pr-10 text-left">
+                <div className="bg-gray-800 border border-purple-600 rounded-xl p-5 md:p-6 shadow-lg hover:shadow-purple-500/20 transition duration-300">
+                  <h3 className="text-xl font-bold text-white mb-1">Software Development</h3>
+                  <p className="text-gray-400 text-sm mb-1">
+                    <strong>PUSBISINDO</strong> | Jakarta Selatan, Indonesia
+                  </p>
+                  <p className="text-purple-400 font-semibold text-xs mb-4">September 2024 - Juni 2025</p>
+                  <ul className="list-disc list-inside text-gray-300 text-sm md:text-base leading-relaxed space-y-2 text-justify">
+                    <li>Membantu proses komunikasi dalam pembelajaran secara online</li>
+                    <li>
+                      Efisiensi biaya terkait tenaga kerja menjadi lebih sedikit dimana tidak perlu banyak pengajar karena sudah ada tools penerjemah dimana orang awam juga bisa mengaksesnya
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-400 mr-2">▹</span>
-                      <span>Awarded 2nd Place in the Best Final Project Competition, Diponegoro University 2025.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-400 mr-2">▹</span>
-                      <span>Developed fullstack features using Python (Django) and MongoDB to streamline real-time user data management.</span>
-                    </li>
+                    <li>Juara II Best Project Tugas Akhir siklus S2T24 Teknik Komputer, Universitas Diponegoro</li>
+                    <li>Membuat Website Video Conference dengan fitur Penerjemah Bahasa Isyarat Tangan secara Online</li>
+                    <li>Membangun jembatan interaksi antara disabilitas dan non-disabilitas</li>
                   </ul>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {['Python', 'Django', 'MongoDB', 'JavaScript', 'Machine Learning'].map((tech) => (
-                      <span key={tech} className="text-xs font-medium text-purple-300 bg-purple-900/30 px-2.5 py-1 rounded-md border border-purple-800/50">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Experience Item 3 - SMPN 8 */}
-            <div className="relative flex items-start mb-16 group">
-              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 group-hover:border-blue-400 group-hover:scale-110 transition-all duration-300 w-5 h-5 rounded-full mt-6 z-10"></div>
+            {/* Timeline Item 3 - SMP NEGERI 8 */}
+            <div className="relative flex items-start mb-12 md:mb-16">
+              {/* Bulatan */}
+              <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-gray-900 border-4 border-purple-500 w-5 h-5 md:w-6 md:h-6 rounded-full mt-6 md:mt-8 z-10"></div>
               
-              <div className="w-full md:w-1/2 ml-auto pl-12 md:pl-10">
-                <div className="bg-gray-800/60 backdrop-blur-md border border-gray-700 hover:border-purple-500/50 rounded-2xl p-6 shadow-xl transition-all">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white">Data Administrator</h3>
-                      <p className="text-purple-400 font-medium text-sm mt-0.5">UPTD SMPN 8 | Pematangsiantar</p>
-                    </div>
-                    <span className="text-gray-400 text-xs font-semibold mt-2 sm:mt-0 bg-gray-900 px-3 py-1 rounded-full border border-gray-700 w-max">
-                      Jul 2022 - Jun 2024
-                    </span>
-                  </div>
-                  
-                  <ul className="list-none text-gray-300 text-sm leading-relaxed space-y-2.5">
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">▹</span>
-                      <span>Analyzed and validated 800+ student records and 60+ staff datasets for data-driven administrative decisions.</span>
+              {/* Konten Card (Kanan di Desktop, Full di HP) */}
+              <div className="w-full md:w-1/2 md:ml-auto pl-14 md:pl-10">
+                <div className="bg-gray-800 border border-purple-600 rounded-xl p-5 md:p-6 shadow-lg hover:shadow-purple-500/20 transition duration-300">
+                  <h3 className="text-xl font-bold text-white mb-1">Administration & Database</h3>
+                  <p className="text-gray-400 text-sm mb-1">
+                    <strong>UPTD SMP NEGERI 8 PEMATANGSIANTAR</strong> | Pematangsiantar, Sumatera Utara
+                  </p>
+                  <p className="text-purple-400 font-semibold text-xs mb-4">Juli 2022 - Juni 2024</p>
+                  <ul className="list-disc list-inside text-gray-300 text-sm md:text-base leading-relaxed space-y-2 text-justify">
+                    <li>Mengelola, memvalidasi, dan memperbarui lebih dari 800+ data siswa yang mencakup identitas pribadi, capaian akademik, serta prestasi, sehingga mendukung penyusunan laporan sekolah yang akurat</li>
+                    <li>
+                      Menangani administrasi penerimaan siswa baru dengan melakukan input, verifikasi, serta penyusunan database untuk lebih dari 8x32 atau 256 peserta didik per tahun
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">▹</span>
-                      <span>Built interactive Power BI dashboards to analyze student admission trends, boosting data management efficiency by 40%.</span>
+                    <li>
+                      Mendukung administrasi sarana dan prasarana sekolah melalui pendataan inventaris, serta penyusunan kebutuhan perawatan secara berkala
                     </li>
                   </ul>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {['Power BI', 'Excel', 'Data Analysis', 'Data Validation'].map((tech) => (
-                      <span key={tech} className="text-xs font-medium text-blue-300 bg-blue-900/30 px-2.5 py-1 rounded-md border border-blue-800/50">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
